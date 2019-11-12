@@ -1,9 +1,9 @@
 #include <iostream>
+#include <queue>
 
 #include "ex1.h"
 #include "Expression.h"
-
-
+#include "Interpreter.h"
 
 int main() {
 
@@ -26,6 +26,14 @@ int main() {
     Expression* e3 = new Mul(&(++(*x4)), &((*x5)++));// (++x4)*(x5++)
     cout << "3: " << e3->calculate() << endl; //-10.5
     delete e3;
+
+
+    Interpreter* i1 = new Interpreter();
+    queue<string> result = i1->ShuntingYard("(30.3*400)+(15*60)"); // 30 400 * 15 60 * +
+    while(!result.empty()) {
+      cout << result.front() << endl;
+      result.pop();
+    }
 /*
     // 4
     Interpreter* i1 = new Interpreter();

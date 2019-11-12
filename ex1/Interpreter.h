@@ -12,13 +12,15 @@ class Interpreter {
  private:
   static bool isOperator(const string& s);
   static int precedence(const string& s);
-  map<string, int> varmap;
+  map<string, string> varMap;
+  static vector<string> tokenize(string& str, char delimiter);
  public:
   void setVariables(string& vars);
   Expression* interpret(string& str);
   Interpreter() = default;
   ~Interpreter();
-  static queue<string> ShuntingYard(string str);
+  queue<string> ShuntingYard(string str);
+  void replaceVariables(string &s);
 };
 
 #endif //EX1__INTERPRETER_H_
