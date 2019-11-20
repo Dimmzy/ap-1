@@ -13,14 +13,13 @@ class Interpreter {
   static bool isOperator(const string& s);
   static int precedence(const string& s);
   map<string, string> varMap;
-  static vector<string> tokenize(string& str, char delimiter);
+  static vector<string> tokenize(const string& str,const char delimiter);
  public:
-  void setVariables(string& vars);
-  Expression* interpret(string& str);
+  void setVariables(const string& vars);
+  Expression* interpret(const string& str);
   Interpreter() = default;
-  ~Interpreter();
+  ~Interpreter() = default;
   queue<string> ShuntingYard(string str);
-  void replaceVariables(string &s);
 };
 
 #endif //EX1__INTERPRETER_H_

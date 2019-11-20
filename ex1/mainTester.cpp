@@ -28,18 +28,20 @@ int main() {
     delete e3;
 
 
-    Interpreter* i1 = new Interpreter();
-    queue<string> result = i1->ShuntingYard("(30.3*400)+(15*60)"); // 30 400 * 15 60 * +
+    Interpreter* i12 = new Interpreter();
+    queue<string> result = i12->ShuntingYard("x+3"); // 30 400 * 15 60 * +
     while(!result.empty()) {
       cout << result.front() << endl;
       result.pop();
     }
-/*
+    delete i12;
+
     // 4
     Interpreter* i1 = new Interpreter();
-    Expression* e4 = i1->interpret("-(2*(3+4))");
+    Expression* e4 = i1->interpret("1.0-(-(-4.0))");
     std::cout << "4: " << e4->calculate() << std::endl;//-14
     delete e4;
+    delete i1;
 
     // 5
     Interpreter* i2 = new Interpreter();
@@ -48,6 +50,7 @@ int main() {
     Expression* e5 = i2->interpret("2*(-(x)+y)");
     std::cout << "5: " << e5->calculate() << std::endl;//2
     delete e5;
+    delete i2;
 
     // 6
     Interpreter* i3 = new Interpreter();
@@ -56,6 +59,7 @@ int main() {
     Expression* e6 = i3->interpret("-(-(-((x+0.5)*(y+(-3.5)))))");
     std::cout << "6: " << e6->calculate() << std::endl;//-10
     delete e6;
+    delete i3;
 
     Interpreter* i4 = new Interpreter();
     Expression* e7 = nullptr;
@@ -71,6 +75,7 @@ int main() {
         }
         std::cout << e << std::endl;
     }
-*/
+    delete i4;
+
     return 0;
 }
