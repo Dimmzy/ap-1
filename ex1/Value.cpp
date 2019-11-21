@@ -1,13 +1,10 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #include "Value.h"
 
-
 double Value::calculate() {
-  return this->val;
+  return this->value;
 }
-Value::Value(double val) : val(val){
+Value::Value(double val) : value(val) {
 
 }

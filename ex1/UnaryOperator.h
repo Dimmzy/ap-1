@@ -1,6 +1,4 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #ifndef EX1__UNARYOPERATOR_H_
 #define EX1__UNARYOPERATOR_H_
@@ -8,9 +6,9 @@
 
 class UnaryOperator : public Expression {
  protected:
-  Expression* exp;
+  Expression *express;
  public:
-  explicit UnaryOperator(Expression* exp);
+  explicit UnaryOperator(Expression *exp);
   virtual ~UnaryOperator() = default;
 };
 

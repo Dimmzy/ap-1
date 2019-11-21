@@ -1,6 +1,4 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #ifndef EX1__UMINUS_H_
 #define EX1__UMINUS_H_
@@ -9,7 +7,7 @@
 #include "Value.h"
 class UMinus : public UnaryOperator {
  public:
-  UMinus(Expression* exp);
+  UMinus(Expression *express);
   double calculate();
   virtual ~UMinus();
 };

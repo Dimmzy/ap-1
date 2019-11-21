@@ -1,15 +1,13 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #include "Minus.h"
 Minus::Minus(Expression *right, Expression *left) : BinaryOperator(left, right) {
 
 }
 double Minus::calculate() {
-  return BinaryOperator::right->calculate() - BinaryOperator::left->calculate();
+  return BinaryOperator::rightExp->calculate() - BinaryOperator::leftExp->calculate();
 }
 Minus::~Minus() {
-  delete(BinaryOperator::left);
-  delete(BinaryOperator::right);
+  delete (BinaryOperator::leftExp);
+  delete (BinaryOperator::rightExp);
 }

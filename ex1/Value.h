@@ -1,6 +1,4 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #ifndef EX1__VALUE_H_
 #define EX1__VALUE_H_
@@ -8,7 +6,7 @@
 
 class Value : public Expression {
  private:
-  const double val;
+  const double value;
  public:
   explicit Value(double val);
   double calculate() override;

@@ -1,40 +1,38 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #include "Variable.h"
 
 #include <utility>
 
 Variable::Variable(std::string name, double value) {
-  this->name = std::move(name);
-  this->value = value;
+  this->varname = std::move(name);
+  this->varvalue = value;
 }
 Variable &Variable::operator++() {
-  this->value++;
+  this->varvalue++;
   return *this;
 }
 Variable &Variable::operator--() {
-  this->value--;
+  this->varvalue--;
   return *this;
 }
 Variable &Variable::operator+=(double value) {
-  this->value = this->value += value;
+  this->varvalue += value;
   return *this;
 }
 Variable &Variable::operator-=(double value) {
-  this->value = this->value -= value;
+  this->varvalue -= value;
   return *this;
 }
-Variable &Variable::operator++(int value) {
-  this->value++;
+Variable &Variable::operator++(int) {
+  this->varvalue++;
   return *this;
 }
-Variable &Variable::operator--(int value) {
-  this->value--;
+Variable &Variable::operator--(int) {
+  this->varvalue--;
   return *this;
 }
 
 double Variable::calculate() {
-  return this->value;
+  return this->varvalue;
 }

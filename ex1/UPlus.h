@@ -1,6 +1,4 @@
-//
-// Created by dima on 11/11/2019.
-//
+
 
 #ifndef EX1__UPLUS_H_
 #define EX1__UPLUS_H_
@@ -9,7 +7,7 @@
 #include "Value.h"
 class UPlus : public UnaryOperator {
  public:
-  UPlus(Expression* exp);
+  UPlus(Expression *exp);
   double calculate();
   virtual ~UPlus();
 };

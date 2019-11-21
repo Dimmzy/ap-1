@@ -1,6 +1,3 @@
-//
-// Created by dima on 11/11/2019.
-//
 
 #ifndef EX1_EX1_H
 #define EX1_EX1_H
@@ -16,8 +13,6 @@
 #include "UPlus.h"
 #include "Variable.h"
 #include "Value.h"
-
-
-
+#include "Interpreter.h"
 
 #endif //EX1_EX1_H

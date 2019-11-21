@@ -1,6 +1,3 @@
-//
-// Created by dima on 11/11/2019.
-//
 
 #ifndef EX1__VARIABLE_H_
 #define EX1__VARIABLE_H_
@@ -19,9 +16,8 @@ class Variable : public Expression {
   double calculate() override;
   virtual ~Variable() = default;
  private:
-  string name;
-  double value;
+  string varname;
+  double varvalue;
 };
-
 
 #endif //EX1__VARIABLE_H_
