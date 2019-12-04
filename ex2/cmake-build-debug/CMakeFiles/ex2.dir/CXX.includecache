@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dima/Desktop/Repos/ap-1/ex2/ex2.h
+string
+-
+unordered_map
+-
+fstream
+-
+functional
+-
+
+/home/dima/Desktop/Repos/ap-1/ex2/main.cpp
+ex2.h
+/home/dima/Desktop/Repos/ap-1/ex2/ex2.h
+iostream
+-
+string
+-
+
